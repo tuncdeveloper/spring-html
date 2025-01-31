@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Page</title>
+    <link rel="stylesheet" href="user.css">
+</head>
+<body>
+<nav>
+    <h1>My Social App</h1>
+    <h2 id="username"></h2> <!-- Kullanıcı adı burada gösterilecek -->
+    <button id="logoutBtn">Çıkış Yap</button>
+</nav>
+
+<div class="container">
+    <!-- Sol Alan: Kendi Gönderilerim -->
+    <div class="select-container">
+        <div id="user-posts">
+            <h2>Kendi Gönderilerim</h2>
+            <!-- Kullanıcının gönderileri burada listelenecek -->
+            <div id="user-post-list">
+                <!-- Dinamik gönderiler buraya eklenecek -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Sağ Alan: Herkesin Gönderileri -->
+    <div class="select-container">
+        <div id="all-posts">
+            <h2>Herkesin Gönderileri</h2>
+            <!-- Herkesin gönderileri burada dinamik olarak listelenecek -->
+            <div id="all-post-list">
+                <!-- Dinamik gönderiler buraya eklenecek -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bilgilerini Güncelle Butonu -->
+<section id="user-update-section">
+    <button onclick="updateUser()">Bilgilerini Güncelle</button>
+</section>
+<!-- Yeni Gönderi Paylaş -->
+<section id="new-post-section">
+    <h2>Yeni Gönderi Paylaş</h2>
+    <input type="text" id="postTitle" placeholder="Başlık">
+    <textarea id="postText" placeholder="İçerik"></textarea>
+    <button onclick="addPost()">Paylaş</button>
+</section>
+
+<script src="user.js"></script>
+</body>
+</html>
